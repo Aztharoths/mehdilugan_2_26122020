@@ -1,0 +1,100 @@
+/*--------------------FONTS--------------------*/
+@font-face {
+  font-family: "Raleway";
+  src: url("fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+/*--------------------GENERAL--------------------*/
+
+#bloc_page {
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style-type: none;
+}
+/*--------------------HEADER--------------------*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  width: 100px;
+}
+
+nav ol li b {
+  color: #0065fc;
+}
+nav ol li {
+  display: inline;
+  margin-right: 70px;
+}
+/*--------------------SEARCH BAR--------------------*/
+#search_bar{
+  height: 50px;
+  width: 450px;
+  border: 2px black solid;
+}
+
+/*--------------------FILTERS--------------------*/
+#filters{
+height: 50px;
+width: 950px;
+border: 2px black solid;
+}
+/*--------------------RESULTS HOUSING--------------------*/
+#result_housing{
+  display: flex;
+  justify-content: space-between;
+}
+/*--------------------RESULTS ACTIVITIES--------------------*/
+#result_activities{
+  height: 500px;
+  width: 1350px;
+  border: 2px black solid;
+}
+
+/*--------------------HOUSING--------------------*/
+#housing{
+  height: 700px;
+  width: 875px;
+  background-color: #f2f2f2;
+}
+/*--------------------POPULAR--------------------*/
+#popular{
+  height: 700px;
+  width: 425px;
+  background-color: #f2f2f2;
+}
+
+/*--------------------FOOTER--------------------*/
+
+footer {
+  background-color: #f2f2f2;
+  display: flex;
+}
+footer div {
+  margin-left: 50px;
+}
+footer ul {
+  padding: 0px;
+}
+footer ul li {
+  margin-top: 10px;
+}
+
+@media all and (max-width: 991px) {
+  footer {
+    flex-direction: column;
+  }
+  footer div {
+    max-width: 350px;
+  }
+}
