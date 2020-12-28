@@ -5,10 +5,11 @@
 }
 /*--------------------GENERAL--------------------*/
 
-#bloc_page {
-  max-width: 1440px;
-  margin: auto;
+body {
   font-family: "Raleway", sans-serif;
+}
+#bloc_page {
+  margin: 0;
 }
 
 a {
@@ -18,29 +19,41 @@ a {
 li {
   list-style-type: none;
 }
+/*--------------------ICONS--------------------*/
+.blue {
+  color: #0065fc;
+}
+.grey {
+  color: #f2f2f2;
+}
+
 /*--------------------HEADER--------------------*/
 
 header {
+  margin-top: 2%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-header h1 {
-  width: 100px;
-}
 
-nav ol li b {
-  color: #0065fc;
+  border: 2px black solid;
+}
+header img {
+  width: 100px;
 }
 nav ol li {
   display: inline;
   margin-right: 70px;
-  padding: 44px 5px 0px 5px;
+  padding: 44px 10px 0px 10px;
 }
-nav ol li :hover {
-  border-top: 2px #0065fc solid;
-  padding: 44px 5px 0px 5px;
+
+nav ol li:hover {
+  border-top: 5px #0065fc solid;
 }
+
+header ol li b {
+  color: #0065fc;
+}
+
 /*--------------------SEARCH BAR--------------------*/
 #search_bar {
   height: 50px;
@@ -54,35 +67,64 @@ nav ol li :hover {
   width: 950px;
   border: 2px black solid;
 }
-/*--------------------RESULTS HOUSING--------------------*/
+/*--------------------RESULTS--------------------*/
+/*--------------------HOUSING--------------------*/
 #result_housing {
   display: flex;
   justify-content: space-between;
 }
-/*--------------------RESULTS ACTIVITIES--------------------*/
+
+#housing_city {
+  border-radius: 15px;
+  width: 60%;
+  background-color: #f2f2f2;
+  padding: 2%;
+}
+#housing {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hotel {
+  position: relative;
+  width: 246px;
+  height: 199px;
+  margin: 0 0 25px 0;
+  border: 5px white solid;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 20px;
+}
+
+.hotel img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.hotel_name {
+  position: absolute;
+  height: 40%;
+  bottom: 0%;
+  width: 100%;
+  background: white;
+}
+/*--------------------POPULAR--------------------*/
+#popular {
+  border-radius: 15px;
+  width: 30%;
+  background-color: #f2f2f2;
+}
+/*--------------------ACTIVITIES--------------------*/
 #result_activities {
   height: 500px;
   width: 1350px;
   border: 2px black solid;
 }
-
-/*--------------------HOUSING--------------------*/
-#housing {
-  height: 700px;
-  width: 875px;
-  background-color: #f2f2f2;
-}
-/*--------------------POPULAR--------------------*/
-#popular {
-  height: 700px;
-  width: 425px;
-  background-color: #f2f2f2;
-}
-
 /*--------------------FOOTER--------------------*/
 
 footer {
   background-color: #f2f2f2;
+  width: 100%;
   display: flex;
 }
 footer div {
@@ -98,8 +140,5 @@ footer ul li {
 @media all and (max-width: 991px) {
   footer {
     flex-direction: column;
-  }
-  footer div {
-    max-width: 350px;
   }
 }
