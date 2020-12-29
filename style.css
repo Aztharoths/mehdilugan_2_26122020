@@ -1,12 +1,8 @@
-/*--------------------FONTS--------------------*/
-@font-face {
-  font-family: "Raleway";
-  src: url("fonts/Raleway-VariableFont_wght.ttf") format("truetype");
-}
+
 /*--------------------GENERAL--------------------*/
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 #bloc_page {
   margin: 0;
