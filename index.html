@@ -3,26 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css" />
+    <script
+      src="https://kit.fontawesome.com/b3faafc8a5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Reservia</title>
   </head>
   <body>
     <div id="bloc_page">
       <header>
-        <h1><img src="img/logo/Reservia.svg" /></h1>
+        <img src="img/logo/Reservia.svg" alt="Logo de Reservia" />
         <nav>
           <ol>
             <li><a href="#">Hébergements</a></li>
             <li><a href="#">Activités</a></li>
-            <li>
-              <a href="#"><b>S'inscrire</b></a>
-            </li>
+            <li><a href="#"><b>S'inscrire</b></a</li><!--A CHANGER !!!-->
           </ol>
+          
         </nav>
+        
       </header>
 
       <section>
-        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
         <div id="search_bar">
           <p>BARRE DE RECHERCHE</p>
@@ -30,16 +33,134 @@
         <div id="filters">
           <p>FILTRES</p>
         </div>
-        <p><i class="fas fa-info-circle" style="color: #0065fc;"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+        <p>
+          <i class="fas fa-info-circle blue"></i>Plus de 500 logements sont
+          disponibles dans cette ville
+        </p>
       </section>
+
+      <!----------------------RESULTS---------------------->
+      <!----------------------HOUSING---------------------->
+
       <section id="result_housing">
-        <div id="housing"><p>Hébergements à Marseille</p></div>
-        <div id="popular"><p>Les plus populaires</p></div>
+        <article id="housing_city">
+          <h2>Hébergements à Marseille</h2>
+          <div id="housing">
+            <div class="hotel">
+              <img
+                src="img/results/housing/cannebiere.jpg"
+                alt="Auberge La Cannebière"
+              />
+
+              <div class="hotel_name">
+                <h3>Auberge La Cannebiere</h3>
+                <p>
+                  Nuit à partir de <b>25€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star grey"></i>
+                </p>
+              </div>
+            </div>
+            <div class="hotel">
+              <img src="img/results/housing/port.jpg" alt="Hôtel du port" />
+
+              <div class="hotel_name">
+                <h3>Hôtel du port</h3>
+                <p>
+                  Nuit à partir de 52<b>€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i>
+                </p>
+              </div>
+            </div>
+            <div class="hotel">
+              <img
+                src="img/results/housing/mouettes.jpg"
+                alt="Hôtel Les mouettes"
+              />
+
+              <div class="hotel_name">
+                <h3>Hôtel Les mouettes</h3>
+                <p>
+                  Nuit à partir de 76<b>€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star grey"></i>
+                </p>
+              </div>
+            </div>
+            <div class="hotel">
+              <img src="img/results/housing/mer.jpg" alt="Hôtel de la mer" />
+
+              <div class="hotel_name">
+                <h3>Hôtel de la mer</h3>
+                <p>
+                  Nuit à partir de 46<b>€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star grey"></i
+                  ><i class="fas fa-star grey"></i>
+                </p>
+              </div>
+            </div>
+            <div class="hotel">
+              <img
+                src="img/results/housing/panier.jpg"
+                alt="Auberge Le Panier"
+              />
+
+              <div class="hotel_name">
+                <h3>Auberge Le Panier</h3>
+                <p>
+                  Nuit à partir de <b>23€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star grey"></i>
+                </p>
+              </div>
+            </div>
+            <div class="hotel">
+              <img src="img/results/housing/amina.jpg" alt="Hôtel chez Amina" />
+
+              <div class="hotel_name">
+                <h3>Hôtel chez Amina</h3>
+                <p>
+                  Nuit à partir de 96<b>€</b><br /><i
+                    class="fas fa-star blue"
+                  ></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i
+                  ><i class="fas fa-star blue"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!----------------------POPULAR---------------------->
+        <aside id="popular"><h2>Les plus populaires</h2></aside>
       </section>
+      <!----------------------ACTIVITIES---------------------->
       <section id="result_activities">
         <div><p>Activités à Marseille</p></div>
       </section>
-
       <footer>
         <div>
           <h3>A propos</h3>
