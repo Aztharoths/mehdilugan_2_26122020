@@ -15,30 +15,37 @@
     <div id="bloc_page">
       <!----------------------HEADER---------------------->
       <header>
-        <p class="logo"><img src="img/logo/Reservia.svg" alt="Logo de Reservia" /></p>
+        <p id="logo"><img src="img/logo/Reservia.svg" alt="Logo de Reservia" /></p>
         <nav>          
           <a href="#">Hébergements</a></li>
           <a href="#">Activités</a></li>
         </nav>
         <p>
-        <a class="blue bold submit" href="#" >S'inscrire</a></p>
+        <a class="blue bold " id="submit" href="#" >S'inscrire</a></p>
       </header>
-<!--
-      <section>
+
+      <section id="research">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
-        <div id="search_bar">
-          <p>BARRE DE RECHERCHE</p>
-        </div>
-        <div id="filters">
-          <p>FILTRES</p>
+        <form id="search_bar">
+          <p id="map_icon"><i class="fas fa-map-marker-alt"></i></p>
+          <input id="search_city" class="bold large" type="text" id="search_city" value="Marseille, France" ></input>
+          <input id="search_button" class="bold white large" type="submit" value="Rechercher"/>
+          <button id="search_icon" class="bold white large" type="submit" value=""><i class="fas fa-search"></i></button>
+        </form>
+        <div id="filters" class=>
+          <p class="bold">Filtres</p>
+          <div class="filters"><p class="filters_icon blue"><i class="fas fa-money-bill-wave"></i></p><p class="filters_name bold">Économique</p></div>
+          <div class="filters"><p class="filters_icon blue"><i class="fas fa-child"></i></p><p class="filters_name bold">Familial</p></div>
+          <div class="filters"><p class="filters_icon blue"><i class="fas fa-heart"></i></p><p class="filters_name bold">Romantique</p></div>
+          <div class="filters"><p class="filters_icon blue"><i class="fas fa-dog"></i></p><p class="filters_name bold">Animaux autorisés</p></div>
         </div>
         <p>
           <i class="fas fa-info-circle blue"></i>Plus de 500 logements sont
           disponibles dans cette ville
         </p>
       </section>
--->
+
       <!----------------------RESULTS---------------------->
       <!----------------------HOUSING---------------------->
 <!--
