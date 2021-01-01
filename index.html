@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -16,12 +17,14 @@
       <!----------------------HEADER---------------------->
       <header>
         <p id="logo"><img src="img/logo/Reservia.svg" alt="Logo de Reservia" /></p>
+        
         <nav>          
-          <a href="#">Hébergements</a></li>
-          <a href="#">Activités</a></li>
+          <a href="#result_housing">Hébergements</a></li>
+          <a href="#result_activities">Activités</a></li>
         </nav>
         <p>
-        <a class="blue bold " id="sign_up" href="#" >S'inscrire</a></p>
+          <a class="blue bold " id="sign_up" href="#" >S'inscrire</a></p> 
+        
       </header>
 
       <section id="research">
@@ -35,10 +38,10 @@
         </form>
         <div id="filters" class=>
           <h3>Filtres</h3>
-          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-money-bill-wave"></i></p><p class="filters_text bold">Économique</p></button></div>
-          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-child"></i></p><p class="filters_text bold">Familial</p></button></div>
-          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-heart"></i></p><p class="filters_text bold">Romantique</p></button></div>
-          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-dog"></i></p><p class="filters_text bold">Animaux autorisés</p></button></div>
+          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-money-bill-wave"></i></p><p class="filters_text bold large">Économique</p></button></div>
+          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-child"></i></p><p class="filters_text bold large">Familial</p></button></div>
+          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-heart"></i></p><p class="filters_text bold large">Romantique</p></button></div>
+          <div class="filters"><button class="filters_button" href="#"><p class="filters_icon blue"><i class="fas fa-dog"></i></p><p class="filters_text bold large">Animaux autorisés</p></button></div>
         </div>
         <p id="info">
           <i class="fas fa-info-circle blue"></i>Plus de 500 logements sont
@@ -187,7 +190,7 @@
                 <div class="hotel_popular_name">
                   <h4>Hôtel Le soleil du matin</h4>
                   <p>
-                    Nuit à partir de 128<b>€</b></p><p><i
+                    Nuit à partir de 128<b>€</b></p><p class="popular_stars"><i
                       class="fas fa-star blue"
                     ></i
                     ><i class="fas fa-star blue"></i
@@ -205,7 +208,7 @@
                 <div class="hotel_popular_name">
                   <h4>Au cœur de l'eau Chambres d'hôtes</h4>
                   <p>
-                    Nuit à partir de 71<b>€</b></p><p><i
+                    Nuit à partir de 71<b>€</b></p><p class="popular_stars"><i
                       class="fas fa-star blue"
                     ></i
                     ><i class="fas fa-star blue"></i
@@ -223,7 +226,7 @@
                 <div class="hotel_popular_name">
                   <h4>Hôtel Tout bleu et Blanc</h4>
                   <p>
-                    Nuit à partir de 68<b>€</b></p><p><i
+                    Nuit à partir de 68<b>€</b></p><p class="popular_stars"><i
                       class="fas fa-star blue"
                     ></i
                     ><i class="fas fa-star blue"></i
@@ -240,13 +243,71 @@
       </section>
 
       <!----------------------ACTIVITIES---------------------->
-<!--
+
       <section id="result_activities">
-        <div><p>Activités à Marseille</p></div>
+        <h2>Activités à Marseille</h2>
+          <div id="activities">
+            <div class="segment">
+              <div id="location1">
+                <a href="#">
+                  <img src="img/results/activities/vieux_port.jpg" alt="Photo du Vieux Port de Marseille" />
+                  <div class="location_name">
+                    <h4>Vieux Port</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="segment">
+              <div id="location2">
+                <a href="#">
+                  <img src="img/results/activities/pomegues.jpg" alt="Photo du Fort de Pomègues" />
+                  <div class="location_name">
+                    <h4>Fort de Pomègues</h4>
+                  </div>
+                </a>
+              </div>
+              <div id="location3">
+                <a href="#">
+                  <img src="img/results/activities/frioul.jpg" alt="Photo des Îles du Frioul" />
+                  <div class="location_name">
+                    <h4>Îles du Frioul</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="segment">
+              <div id="location4">
+                <a href="#">
+                  <img src="img/results/activities/calanques.jpg" alt="Photo du Parc National des Calanques" />
+                  <div class="location_name">
+                    <h4>Parc National des Calanques</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="segment">
+              <div id="location5">
+                <a href="#">
+                  <img src="img/results/activities/nd_garde.jpg" alt="Photo de Notre-Dame-de-la-Garde" />
+                  <div class="location_name">
+                    <h4>Notre-Dame-de-la-Garde</h4>
+                  </div>
+                </a>
+              </div>
+              <div id="location6">
+                <a href="#">
+                  <img src="img/results/activities/longchamp.jpg" alt="Photo du Parc Longchamp" />
+                  <div class="location_name">
+                    <h4>Parc Longchamp</h4>
+                  </div>
+                </a>
+              </div>
+            </div>  
+          </div>
       </section>
--->  
+ 
       <!----------------------FOOTER---------------------->
-<!--          
+          
       <footer>
         <div>
           <h3>A propos</h3>
@@ -271,7 +332,7 @@
           </ul>
         </div>
       </footer>
--->  
+ 
     </div>
   </body>
 </html>
