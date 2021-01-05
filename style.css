@@ -1,17 +1,14 @@
 /*--------------------GENERAL--------------------*/
 
 body {
-  font-family: "Raleway", sans-serif;
-  color: #000000;
   margin: 0;
-  font-size: 16px;
 }
 #bloc_page {
-  position: relative;
-  max-width: 1440px;
-  margin: auto;
-  margin-top: 2px;
-  border: 1px solid black;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 0 20px 0 50px;
+  max-width: 1700px;
+  box-sizing: border-box;
 }
 
 a {
@@ -52,80 +49,85 @@ button,
 
 header {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
   align-items: center;
-  margin-left: 3.5%;
+  height: 115px;
 }
 #logo {
-  position: absolute;
-  left: 3.5%;
+  width: calc(100% - 500px);
+}
+nav {
+  height: 115px;
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
 }
 header a {
-  padding: 1em 1em 0 1em;
+  padding: 50px 1em 0 1em;
   margin: 0 1em 0 1em;
 }
 nav a:hover {
   border-top: 2px #0065fc solid;
   color: #0065fc;
 }
+#sign_up {
+  width: 100px;
+  padding-right: 20px;
+}
 
-#sign_up:hover/*,
+#sign_up a:hover/*,
   #sign_up:visited*/ {
   color: #deebff;
 }
-
-@media /*handheld*/ (max-width: 991px) {
+@media (min-width: 769px) AND (max-width: 1000px) {
   #bloc_page {
-    width: 375px;
+    max-width: 769px;
+    background-color: blueviolet;
   }
+}
+@media (max-width: 768px) {
   header {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    margin: auto;
+    margin: 0;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
   }
   #logo {
-    position: absolute;
-    left: 1.25%;
+    padding-left: 20px;
+    width: 40%;
   }
-
   nav {
+    order: 3;
     width: 100%;
-    display: flex;
-    text-align: center;
-  }
-
-  a {
-    display: block;
-  }
-  nav a:hover {
-    border-top: none;
-    border-bottom: 3px #0065fc solid;
-    color: #0065fc;
+    height: auto;
+    justify-content: start;
   }
   nav a {
     width: 50%;
-    padding-bottom: 1em;
-    border-bottom: 3px solid #f2f2f2;
+    text-align: center;
+    padding: 0;
     margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f2f2f2;
   }
-
+  nav a:hover {
+    border: none;
+    border-bottom: 3px solid #0065fc;
+  }
   #sign_up {
-    margin-right: 1%;
+    order: 2;
+    text-align: end;
+    width: 40%;
   }
 }
 
 /*--------------------SEARCH BAR--------------------*/
 
-#research {
-  margin-left: 3.5%;
-}
 #research h2 {
   font-weight: normal;
   font-size: 1rem;
 }
 #search_bar {
+  margin-top: 15px;
   height: 50px;
   width: 450px;
   display: flex;
@@ -171,7 +173,7 @@ nav a:hover {
   color: #0065fc;
 }
 
-@media /*handheld*/ (max-width: 991px) {
+@media (max-width: 768px) {
   #search_bar {
     width: 375px;
   }
@@ -192,12 +194,12 @@ nav a:hover {
 /*--------------------FILTERS--------------------*/
 
 #filters {
+  margin-top: 25px;
   height: 50px;
   width: 950px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
 }
 
 .filters {
@@ -239,8 +241,20 @@ nav a:hover {
 .filters_text {
   margin-right: 10px;
 }
-
-@media /*handheld*/ (max-width: 991px) {
+#info {
+  margin-top: 30px;
+}
+@media (min-width: 769px) AND (max-width: 1000px) {
+  #filters {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  #filters h3 {
+    margin-right: 100%;
+  }
+}
+@media (max-width: 768px) {
   #filters {
     width: 100%;
     height: 100%;
@@ -263,7 +277,7 @@ nav a:hover {
 #result_housing {
   display: flex;
   justify-content: space-between;
-  margin-left: 3.5%;
+  margin-top: 35px;
 }
 
 #housing_city {
@@ -275,15 +289,17 @@ nav a:hover {
   margin-left: 5%;
 }
 #housing {
+  height: 450px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 5% 0 5%;
 }
 .hotel {
-  position: relative; /* +FLEX-ABSOLUTE*/
-  width: 246px;
-  height: 199px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
   margin: 0 0 3.5% 0;
   border: 5px white solid;
   box-sizing: border-box;
@@ -299,11 +315,11 @@ nav a:hover {
   border-radius: 20px 20px 0 0;
 }
 .hotel_name {
-  position: absolute;
   height: 40%;
-  bottom: 0;
   width: 100%;
   background: white;
+  box-sizing: border-box;
+  border-radius: 0 0 20px 20px;
 }
 .hotel_name h4 {
   margin: 10px 0 5px 15px;
@@ -317,7 +333,7 @@ nav a:hover {
 
 #see_more {
   font-weight: bold;
-  margin: 5%;
+  margin: 10px 0 0 5%;
 }
 
 /*--------------------POPULAR--------------------*/
@@ -376,10 +392,121 @@ nav a:hover {
   bottom: 10%;
   font-size: 0.75em;
 }
-
-@media /*handheld*/ (max-width: 991px) {
+@media (min-width: 1000px) AND (max-width: 1400px) {
   #result_housing {
+    flex-direction: column-reverse;
+  }
+  #housing_city_popular {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #housing_city_popular h2 {
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5%;
+  }
+  #housing_city_popular h2 i {
+    margin-left: 50px;
+  }
+  #housing_popular {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 50px 5% 0 5%;
+  }
+  #housing_city {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #housing_city h2 {
+    margin-left: 5%;
+  }
+  #housing {
+    margin: 50px 5% 0 5%;
+  }
+  .hotel {
+    flex-direction: row;
+    height: 144px;
+    width: 333px;
+  }
+  .hotel img {
+    height: 100%;
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+  }
+  .hotel_name {
+    height: 100%;
+    width: 60%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0 20px 20px 0;
+  }
+  #see_more {
+    position: relative;
+    bottom: 20px;
+  }
+}
+@media (min-width: 769px) AND (max-width: 1000px) {
+  /*--------------------POPULAR--------------------*/
+  #housing_city_popular {
+    width: 47%;
+    height: 600px;
+    order: 1;
+  }
+  #housing_city_popular h4 {
+    font-size: 1em;
+  }
+  /*--------------------HOUSING--------------------*/
+  #housing_city {
+    width: 47%;
+    height: 600px;
+    overflow: auto;
+    order: 2;
+  }
+  #housing_popular {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 10% 0 10%;
+  }
+  .hotel {
+    position: relative;
+    width: 333px;
+    height: 144px;
+    margin: 0 0 25px 0;
+    border: 5px white solid;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px #d9d9d9;
+    overflow: hidden;
+  }
+  .hotel img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+  }
+  .hotel_name {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 60%;
+    background: white;
+  }
+
+  .hotel_name h4 {
+    font-size: 1em;
+    margin: 10px 0 10px 15px;
+  }
+  .hotel_name p {
+    margin: 0 0 0 15px;
+  }
+}
+@media (max-width: 768px) {
+  #result_housing {
     flex-direction: column-reverse;
     margin: 0;
   }
@@ -417,69 +544,66 @@ nav a:hover {
 #result_activities {
   margin-top: 60px;
 }
-#result_activities h2 {
-  margin-left: 3.5%;
-}
+
 #activities {
-  margin-left: 3.5%;
-  height: 450px;
-  margin-bottom: 60px;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 200px 40px 50px 170px;
 }
-.segment {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+
+#location1 {
+  grid-area: 1/1/5/2;
 }
-#location1,
-#location2,
-#location3,
-#location4,
-#location5,
+#location2 {
+  grid-area: 1/2/3/3;
+}
+#location3 {
+  grid-area: 4/2/5/3;
+}
+#location4 {
+  grid-area: 1/3/5/4;
+}
+#location5 {
+  grid-area: 1/4/2/5;
+}
 #location6 {
-  position: relative;
-  width: 305px;
+  grid-area: 3/4/5/5;
+}
+
+.location {
+  display: flex;
+  width: 85%;
+  flex-direction: column;
   box-sizing: border-box;
-  background: white;
   border-radius: 20px;
   box-shadow: 1px 1px 8px #d9d9d9;
-  overflow: hidden;
 }
-#result_activities a img {
+
+.location img {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 55px);
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
 .location_name {
   width: 100%;
   height: 55px;
-  padding-left: 15px;
-  position: absolute;
-  bottom: 0%;
+  border-radius: 0 0 20px 20px;
   background-color: #fff;
 }
-#location1 {
-  height: 100%;
+.location_name h4 {
+  margin-left: 18px;
 }
-#location2 {
-  height: 50%;
+
+/*@media (min-width: 769px) AND (max-width: 1000px) {
+  #activities {
+    border: 2px solid blue;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
-#location3 {
-  height: 35%;
-}
-#location4 {
-  height: 100%;
-}
-#location5 {
-  height: 40%;
-}
-#location6 {
-  height: 45%;
-}
-@media /*handheld*/ (max-width: 991px) {
+@media (max-width: 768px) {
   #activities {
     flex-direction: column;
     margin: 0;
@@ -507,26 +631,35 @@ nav a:hover {
     box-shadow: 1px 1px 8px #d9d9d9;
     overflow: hidden;
   }
-}
+}*/
 /*--------------------FOOTER--------------------*/
 
 footer {
   background-color: #f2f2f2;
   width: 100%;
+  margin-top: 60px;
+}
+#links {
+  width: 75%;
+  padding-bottom: 40px;
   display: flex;
+  justify-content: space-between;
 }
-footer div {
-  margin-left: 50px;
-}
+
 footer ul {
   padding: 0px;
 }
 footer ul li {
   margin-top: 10px;
 }
-
-@media /*handheld*/ (max-width: 991px) {
-  footer {
+@media (min-width: 769px) AND (max-width: 1000px) {
+  #links {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 768px) {
+  #links {
     flex-direction: column;
   }
 }
