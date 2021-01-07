@@ -7,6 +7,7 @@ body {
   max-width: 1700px;
   border: 2px solid red;
   box-sizing: border-box;
+  margin: auto;
 }
 
 a {
@@ -15,6 +16,10 @@ a {
 }
 li {
   list-style-type: none;
+}
+button,
+#map_icon{
+  cursor: pointer;
 }
 /*--------------------TEXT--------------------*/
 .blue {
@@ -71,6 +76,7 @@ h1 {
 #search_bar {
   margin-left: 20px;
   display: flex;
+  max-width: 420px;
 }
 #map_icon {
   display: flex;
@@ -79,13 +85,14 @@ h1 {
   background-color: #f2f2f2;
   height: 50px;
   width: 50px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px 0 0 15px;  
 }
 #search_city {
   border: 1px solid #f2f2f2;
   padding-left: 10px;
   font-size: large;
   font-weight: bold;
+  width: calc(100% - 100px);
 }
 #search_city:focus {
   outline-style: none;
@@ -100,8 +107,9 @@ h1 {
   width: 50px;
   border-radius: 15px;
   border: none;
-  position: relative;
+  position: relative;  
   left: -10px;
+  font-weight: bold;  
 }
 #search_icon:hover {
   background-color: #deebff;
@@ -156,6 +164,7 @@ h1 {
   left: -8px;
 }
 .filters_text {
+  display: block;
   padding-right: 10px;
   font-size: large;
   font-weight: bold;
@@ -184,15 +193,22 @@ h1 {
   align-items: center;
   width: calc(100% - 40px);
 }
+#housing_city_popular a {    
+  width: 80%;    
+  margin: 0 auto 0 auto; 
+}
 .hotel_popular {
-  width: 80%;
-  height: 140px;
+  width: 100%;
+  height: 144px;
   display: flex;
   border: 5px solid #fff;
   background-color: #fff;
   border-radius: 20px;
   box-sizing: border-box;
   box-shadow: 1px 1px 8px #d9d9d9;
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
 .hotel_popular img {
   height: 100%;
@@ -211,12 +227,14 @@ h1 {
 }
 .hotel_popular_name h4 {
   margin-bottom: 0px;
+  margin-top: 5px;
   height: 40px;
 }
 .hotel_popular_name p:nth-child(2) {
   margin-top: 5px;
 }
 .popular_stars {
+  margin-top: 5px;
   font-size: small;
   align-self: end;
 }
@@ -229,8 +247,12 @@ h1 {
   margin-left: 20px;
   width: calc(100%-20px);
 }
-.hotel {
+#housing_city a{
   width: 80%;
+  margin: 0 auto 0 auto;
+}
+.hotel {
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 200px;
@@ -239,6 +261,8 @@ h1 {
   border: 5px solid #fff;
   background-color: #fff;
   box-shadow: 1px 1px 8px #d9d9d9;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hotel img {
   height: 60%;
@@ -278,8 +302,12 @@ h1 {
   margin-left: 20px;
   width: calc(100%-20px);
 }
-.location {
+#result_activities a {
   width: 80%;
+  margin: 0 auto 0 auto;
+}
+.location {
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 200px;
@@ -288,6 +316,8 @@ h1 {
   border: 5px solid #fff;
   background-color: #fff;
   box-shadow: 1px 1px 8px #d9d9d9;
+  margin-left: auto;
+  margin-right: auto;
 }
 .location img {
   height: 70%;
@@ -310,4 +340,170 @@ footer div {
 }
 footer ul {
   padding-left: 0px;
+}
+@media (min-width: 420px) {
+  /*--------------------POPULAR--------------------*/
+  .hotel_popular_name h4 {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 490px) {
+  /*--------------------HEADER--------------------*/
+  #search_icon{
+    display: none;
+  }
+  #search_button{   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0065fc;
+  color: #fff;
+  height: 50px;
+  width: 100px;
+  border-radius: 0 15px 15px 0;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  left: -10px;
+  }
+  #search_button:hover {
+    background-color: #deebff;
+    color: #0065fc;
+  }
+  #search_button:active,
+  #search_button:focus {
+    background-color: #deebff;
+    border: 1px solid #0065fc;
+    color: #0065fc;
+    outline-style: none;
+  }
+  /*--------------------POPULAR--------------------*/
+  .hotel_popular {
+    flex-direction: column;
+    height: 200px;
+  }
+  .hotel_popular img {
+    width: 100%;
+    height: 70%;
+    border-radius: 20px 20px 0 0;
+  }
+  .hotel_popular_name {
+    width: calc(100% - 20px);
+    height: 30%;
+    border-radius: 0 0 20px 20px;
+  }
+  .hotel_popular_name h4 {
+    margin: 5px 70px 0 0;
+    height: 1.2rem;
+  }
+  .hotel_popular_name p:nth-child(2) {
+    margin: 0 70px 0 0;
+  }
+  .popular_stars {
+    margin: 2px 0 0 0;
+  }
+  /*--------------------HOUSING--------------------*/
+  .hotel img {
+    height: 70%;
+  }
+  .hotel_name {
+    height: 30%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hotel_name h4 {
+    margin: 5px 200px 0 0;
+    height: 1.2rem;
+  }
+  .hotel_name p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  .hotel_name p:nth-child(2) {
+    margin-right: 70px;
+  }
+  .hotel_name i {
+    font-size: normal;
+  }
+}
+@media (min-width: 590px) {
+  /*--------------------POPULAR--------------------*/
+ 
+  }
+}
+@media (min-width: 620px) {
+  /*--------------------POPULAR--------------------*/
+
+  .hotel_popular {
+    height: 300px;
+  }
+  .hotel_popular_name {
+    justify-content: space-between;
+  }
+  .hotel_popular_name h4 {
+    margin-top: 15px;
+    font-size: 1.25rem;
+  }
+  .hotel_popular_name p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+  .popular_stars {
+    font-size: 1rem;
+  }
+  /*--------------------HOUSING--------------------*/
+  #housing_city {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #housing_city h2 {
+    margin-right: 280px;
+  }
+  .hotel {
+    width: 250px;
+    margin: 0 10px 20px 10px;
+  }
+  .hotel img {
+    height: 60%;
+  }
+  .hotel_name {
+    margin-left: 10px;
+    height: 40%;
+  }
+  .hotel_name h4 {
+    margin: 10px 0 0 0;
+  }
+  .hotel_name p {
+    margin-top: 0;
+  }
+  #see_more {
+    width: 100%;
+  }
+  /*--------------------ACTIVITIES--------------------*/
+  .location {
+    height: 300px;
+  }
+  .location img {
+    height: 80%;
+  }
+  .location_name {
+    height: 20%;
+    display: flex;
+    align-items: center;
+  }
+  .location_name h4 {
+    font-size: 1.25rem;
+  }
+  /*--------------------FOOTER--------------------*/
+  footer {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+  footer div {
+    margin-left: 0;
+  }
+  footer li {
+    margin-bottom: 5px;
+  }
 }
