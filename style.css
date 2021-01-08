@@ -5,7 +5,6 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   max-width: 1700px;
-  border: 2px solid red;
   box-sizing: border-box;
   margin: auto;
 }
@@ -81,7 +80,7 @@ h1 {
 #search_bar {
   margin-left: 20px;
   display: flex;
-  max-width: 420px;
+  max-width: 350px;
 }
 #map_icon {
   display: flex;
@@ -353,6 +352,12 @@ footer ul {
 }
 @media (min-width: 490px) {
   /*--------------------HEADER--------------------*/
+  #search_bar {
+    max-width: 450px;
+  }
+  #search_city {
+    width: 60%;
+  }
   #search_icon {
     display: none;
   }
@@ -363,12 +368,11 @@ footer ul {
     background-color: #0065fc;
     color: #fff;
     height: 50px;
-    width: 100px;
+    width: 130px;
     border-radius: 0 15px 15px 0;
     font-weight: bold;
+    font-size: large;
     border: none;
-    position: relative;
-    left: -10px;
   }
   #search_button:hover {
     background-color: #deebff;
@@ -534,6 +538,7 @@ footer ul {
     flex-wrap: nowrap;
     justify-content: space-between;
     height: 100px;
+    border-bottom: 2px solid #f2f2f2;
   }
   #logo {
     width: auto;
@@ -628,8 +633,7 @@ footer ul {
     font-size: initial;
   }
   /*--------------------FOOTER--------------------*/
-  footer {
-  }
+
   footer div:nth-child(3) {
     border-top: none;
     width: auto;
@@ -651,6 +655,7 @@ footer ul {
   /*--------------------HEADER--------------------*/
   header {
     justify-content: left;
+    border-bottom: none;
   }
   #logo {
     width: calc(100% - 485px);
@@ -666,40 +671,143 @@ footer ul {
 @media (min-width: 1080px) {
   /*--------------------HOUSING--------------------*/
   #housing_city {
-    margin-top: 20px;
+    margin-top: 60px;
+  }
+  #housing_city a {
+    width: 30%;
+  }
+  .hotel {
+    height: 144px;
+    flex-direction: row;
+  }
+  .hotel img {
+    height: 100%;
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+  }
+  .hotel_name {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 60%;
+    border-radius: 0 20px 20px 0;
+  }
+  .hotel_name p:nth-child(2) {
+    margin-right: 0px;
   }
   /*--------------------ACTIVITIES--------------------*/
   #result_activities {
+    margin-top: 60px;
     display: grid;
-    grid-template-rows: 50px 210px 40px 35px 180px;
+    width: calc(100% - 40px);
+    grid-template-rows: 70px 210px 40px 35px 180px;
     grid-template-columns: repeat(4, 1fr);
   }
   #result_activities h2 {
+    margin-left: 30px;
     grid-row: 1;
     grid-column: 1 / 5;
   }
-  #location1 {
+  #result_activities a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  #result_activities a:nth-child(2) {
     grid-row: 2 / 6;
     grid-column: 1;
   }
-  #location2 {
+
+  #result_activities a:nth-child(3) {
     grid-row: 2 / 4;
     grid-column: 2;
   }
-  #location3 {
+  #result_activities a:nth-child(4) {
     grid-row: 5 / 6;
     grid-column: 2;
   }
-  #location4 {
+  #result_activities a:nth-child(5) {
     grid-row: 2 / 6;
     grid-column: 3;
   }
-  #location5 {
+  #result_activities a:nth-child(6) {
     grid-row: 2 / 3;
     grid-column: 4;
   }
-  #location6 {
+  #result_activities a:nth-child(7) {
     grid-row: 4/ 6;
     grid-column: 4;
+  }
+  .location {
+    height: 100%;
+    width: 90%;
+  }
+  .location img {
+    height: calc(100% - 50px);
+  }
+  .location_name {
+    height: 50px;
+    width: 80%;
+  }
+  .location_name h4 {
+    font-size: 1rem;
+  }
+  /*--------------------FOOTER--------------------*/
+  footer {
+    margin-top: 60px;
+    justify-content: left;
+  }
+  footer div:nth-child(1) {
+    margin-left: 30px;
+  }
+  footer div:nth-child(2) {
+    margin-left: 200px;
+  }
+  footer div:nth-child(3) {
+    margin-left: 250px;
+  }
+}
+@media (min-width: 1360px) {
+  /*--------------------RESULT--------------------*/
+  #result_housing {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  /*--------------------HOUSING--------------------*/
+  #housing_city {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 60%;
+    border-radius: 20px;
+  }
+  #housing_city a {
+    width: 250px;
+  }
+  .hotel {
+    height: 200px;
+    width: 95%;
+    flex-direction: column;
+  }
+  .hotel img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 60%;
+  }
+  .hotel_name {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 40%;
+  }
+  /*--------------------POPULAR--------------------*/
+  #housing_city_popular {
+    border-radius: 20px;
+    margin-right: 45px;
+    margin-top: 20px;
+    width: 30%;
+    flex-direction: column;
+  }
+  #housing_city_popular a {
+    width: 80%;
   }
 }
