@@ -662,8 +662,15 @@ footer ul {
   #housing_city_popular a {
     width: 30%;
   }
+  .hotel_popular_name {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   .hotel_popular_name h4 {
     font-size: 0.9rem;
+  }
+  .popular_stars {
+    margin-bottom: 5px;
   }
 }
 @media (min-width: 1080px) {
