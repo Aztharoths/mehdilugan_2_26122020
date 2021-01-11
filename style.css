@@ -3,7 +3,7 @@ body {
 }
 #bloc_page {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   max-width: 1640px;
   margin: auto;
 }
@@ -173,7 +173,7 @@ h1 {
   color: #0065fc;
   outline-style: none;
 }
-.filters_icon {
+i.filters_icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +195,7 @@ h1 {
   display: flex;
   align-items: center;
 }
-#info span {
+#info i {
   display: flex;
   justify-content: center;
   align-items: center;
