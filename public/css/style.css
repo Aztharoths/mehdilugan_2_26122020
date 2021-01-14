@@ -183,6 +183,7 @@ i.filters_icon {
   background-color: #deebff;
   position: relative;
   left: -8px;
+  font-size: 1.25rem;
 }
 .filters_text {
   display: block;
