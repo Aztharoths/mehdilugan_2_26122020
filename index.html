@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
@@ -21,7 +21,7 @@
 
       <header>
         <p id="logo">
-          <img src="img/logo/Reservia.svg" alt="Logo de Reservia" />
+          <img src="public/img/logo/Reservia.svg" alt="Logo de Reservia" />
         </p>
         <p id="sign_up">
           <a class="blue bold" href="#"> S'inscrire </a>
@@ -37,11 +37,17 @@
       <section id="research">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <h2>En plein centre ville ou en pleine nature</h2>
-        <form id="search_bar" method="GET" action="#">
+        <form id="search_bar" method="GET" action="index.html">
           <label for="search_city" id="map_icon">
             <i class="fas fa-map-marker-alt"></i>
           </label>
-          <input id="search_city" type="text" value="Marseille, France" />
+          <input
+            id="search_city"
+            type="text"
+            value="Marseille, France"
+            required
+            maxlength="100"
+          />
           <button id="search_button" type="submit" value="">Rechercher</button>
           <button id="search_icon" type="submit" value="">
             <i class="fas fa-search"></i>
@@ -82,7 +88,7 @@
           <a href="#">
             <figure class="hotel_popular">
               <img
-                src="img/results/popular/soleil.jpg"
+                src="public/img/results/popular/soleil.jpg"
                 alt="Hôtel Le soleil du matin"
               />
               <figcaption class="hotel_popular_name">
@@ -101,7 +107,7 @@
           <a href="#">
             <figure class="hotel_popular">
               <img
-                src="img/results/popular/coeur.jpg"
+                src="public/img/results/popular/coeur.jpg"
                 alt="Au cœur de l'eau Chambres d'hôtes"
               />
               <figcaption class="hotel_popular_name">
@@ -120,7 +126,7 @@
           <a href="#">
             <figure class="hotel_popular">
               <img
-                src="img/results/popular/bleu_blanc.jpg"
+                src="public/img/results/popular/bleu_blanc.jpg"
                 alt="Hôtel Tout bleu et Blanc"
               />
               <figcaption class="hotel_popular_name">
@@ -143,7 +149,7 @@
           <a href="#">
             <figure class="hotel">
               <img
-                src="img/results/housing/cannebiere.jpg"
+                src="public/img/results/housing/cannebiere.jpg"
                 alt="Auberge La Cannebière"
               />
               <figcaption class="hotel_name">
@@ -161,7 +167,10 @@
           </a>
           <a href="#">
             <figure class="hotel">
-              <img src="img/results/housing/port.jpg" alt="Hôtel du port" />
+              <img
+                src="public/img/results/housing/port.jpg"
+                alt="Hôtel du port"
+              />
               <figcaption class="hotel_name">
                 <h4>Hôtel du port</h4>
                 <p>Nuit à partir de 52<span class="price">€</span></p>
@@ -178,7 +187,7 @@
           <a href="#">
             <figure class="hotel">
               <img
-                src="img/results/housing/mouettes.jpg"
+                src="public/img/results/housing/mouettes.jpg"
                 alt="Hôtel Les mouettes"
               />
               <figcaption class="hotel_name">
@@ -196,7 +205,10 @@
           </a>
           <a href="#">
             <figure class="hotel">
-              <img src="img/results/housing/mer.jpg" alt="Hôtel de la mer" />
+              <img
+                src="public/img/results/housing/mer.jpg"
+                alt="Hôtel de la mer"
+              />
               <figcaption class="hotel_name">
                 <h4>Hôtel de la mer</h4>
                 <p>Nuit à partir de 46<span class="price">€</span></p>
@@ -213,7 +225,7 @@
           <a href="#">
             <figure class="hotel">
               <img
-                src="img/results/housing/panier.jpg"
+                src="public/img/results/housing/panier.jpg"
                 alt="Auberge Le Panier"
               />
               <figcaption class="hotel_name">
@@ -231,7 +243,10 @@
           </a>
           <a href="#">
             <figure class="hotel">
-              <img src="img/results/housing/amina.jpg" alt="Hôtel chez Amina" />
+              <img
+                src="public/img/results/housing/amina.jpg"
+                alt="Hôtel chez Amina"
+              />
               <figcaption class="hotel_name">
                 <h4>Hôtel chez Amina</h4>
                 <p>Nuit à partir de 96<span class="price">€</span></p>
@@ -258,7 +273,7 @@
         <a href="#">
           <figure class="location" id="location1">
             <img
-              src="img/results/activities/vieux_port.jpg"
+              src="public/img/results/activities/vieux_port.jpg"
               alt="Photo du Vieux Port de Marseille"
             />
             <figcaption class="location_name">
@@ -269,7 +284,7 @@
         <a href="#">
           <figure class="location" id="location2">
             <img
-              src="img/results/activities/pomegues.jpg"
+              src="public/img/results/activities/pomegues.jpg"
               alt="Photo du Fort de Pomègues"
             />
             <figcaption class="location_name">
@@ -280,7 +295,7 @@
         <a href="#">
           <figure class="location" id="location3">
             <img
-              src="img/results/activities/frioul.jpg"
+              src="public/img/results/activities/frioul.jpg"
               alt="Photo des Îles du Frioul"
             />
             <figcaption class="location_name">
@@ -291,7 +306,7 @@
         <a href="#">
           <figure class="location" id="location4">
             <img
-              src="img/results/activities/calanques.jpg"
+              src="public/img/results/activities/calanques.jpg"
               alt="Photo du Parc National des Calanques"
             />
             <figcaption class="location_name">
@@ -302,7 +317,7 @@
         <a href="#">
           <figure class="location" id="location5">
             <img
-              src="img/results/activities/nd_garde.jpg"
+              src="public/img/results/activities/nd_garde.jpg"
               alt="Photo de Notre-Dame-de-la-Garde"
             />
             <figcaption class="location_name">
@@ -313,7 +328,7 @@
         <a href="#">
           <figure class="location" id="location6">
             <img
-              src="img/results/activities/longchamp.jpg"
+              src="public/img/results/activities/longchamp.jpg"
               alt="Photo du Parc Longchamp"
             />
             <figcaption class="location_name">
